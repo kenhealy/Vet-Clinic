@@ -12,29 +12,21 @@ public class staffFactory {
 	
 	public staffFactory() {
 		
-		allStaffTypes = StaffType.values();
+		this.allStaffTypes = StaffType.values();
 		
 	}
 		
-	//@ param a specific department
-	//@ return a random new staff member belonging to dept
+	/**
+         * 
+         * @param dept the department specified
+         * @return a random staff member from department @param dept
+         */
 		public StaffMember getStaff(Department dept) {
 			
 			ArrayList<StaffType> someTypes = new ArrayList<StaffType>();
 		    Random r = new Random();
 			
-			if (dept == Department.ADMIN) {
-				
-				someTypes =  StaffType.listAdmins();
-				
-			}
-			else if (dept == Department.MEDICAL) {
-				
-				someTypes = StaffType.listMedical();
-			}
-			else {
-				
-			}
+			someTypes = dept.listAllTypes();
 			
 			return someTypes.get(r.nextInt(someTypes.size())).getStaff();
 		}
@@ -47,7 +39,10 @@ public class staffFactory {
 			return type.getStaff();
 		}
 	
-		//@return a formatted string listing all available departments
+		/**
+                 * 
+                 * @return a formatted list of all available departments
+                 */
 		public String listDepartments() {
 			
 			String depts="";
@@ -56,6 +51,7 @@ public class staffFactory {
 			for (Department d: Department.values()) {
 				
 				depts = depts.concat(counter + ": " + d.toString() + "\n");
+                                counter++;
 			}
 			
 			return depts;

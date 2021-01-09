@@ -3,12 +3,14 @@ package Exceptions;
 public class SearchException extends Exception {
 
 	public SearchException() {
-		// TODO Auto-generated constructor stub
+		
+          
 	}
 
 	public SearchException(String message) {
-		super(message);
-		// TODO Auto-generated constructor stub
+            
+		super("Search Error: " + message);
+		
 	}
 
 	public SearchException(Throwable cause) {

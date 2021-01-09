@@ -18,9 +18,9 @@ public abstract class StaffMember {
 	private String firstname;
 	private String surname;
 	private int staff_ID;
-	private Department dept;
-	private StaffType role;
-	private Task myTask;
+	private Department dept; //the department they work in
+	private StaffType role;  //specific role (or job title)
+	private Task myTask; // current task being performed
 	
 	private static int currentStaffNumber = 1000;	//Start the staff ID badges at 1000
 	

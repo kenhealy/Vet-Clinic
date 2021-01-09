@@ -64,7 +64,31 @@ public enum AnimalType {
 		}
 		
 		
-	};
+	},
+        
+        RABBIT{
+            
+        
+            @Override
+            public Animal getAnimal() {
+                
+                this.NG = new CatNameGenerator();
+                String name = NG.getRandomName();
+                
+                return new Rabbit(name, getIllness());
+            }
+            
+            @Override
+            public String toString() {
+                
+                return "Rabbit";
+            }
+            
+        }
+        
+        
+        
+        ;
 	
 	protected  NameGenerator NG;
 	public abstract Animal getAnimal();
