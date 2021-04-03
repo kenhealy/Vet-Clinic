@@ -100,5 +100,22 @@ public enum AnimalType {
 		NameGenerator NG = new diseaseGenerator();
 		return (NG.getRandomName());
 	}
+        
+       /**
+        * 
+        * @return All available types as a formatted multi-line String
+        */
+	public static String listAnimalTypes() {
+			
+			String list = "";
+			AnimalType[] types = AnimalType.values();
+			
+			for( int counter = 0; counter<types.length; counter++) {
+			
+				list = list.concat((counter + 1) + ": " + types[counter].toString() + "s \n");
+			}
+			
+			return list;
+		}
 	
 }

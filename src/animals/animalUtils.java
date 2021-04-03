@@ -11,19 +11,7 @@ public class animalUtils {
 		// TODO Auto-generated constructor stub
 	}
 
-	//@return a formatted string containing a numbered list of all available animal types
-		public static String listAnimalTypes() {
-			
-			String list = "";
-			AnimalType[] types = AnimalType.values();
-			
-			for( int counter = 0; counter<types.length; counter++) {
-			
-				list = list.concat((counter + 1) + ": " + types[counter].toString() + "s \n");
-			}
-			
-			return list;
-		}
+	
 		
 		//@return a list of animals from @param allAnimals matching @param type
 		public static ArrayList<Animal> listAnimalsByType(ArrayList<Animal> allAnimals, AnimalType type){
