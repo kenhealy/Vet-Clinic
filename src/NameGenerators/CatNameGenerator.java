@@ -1,5 +1,9 @@
 package NameGenerators;
 
+/**
+ * Extend NameGenerator class and replace firstNames and surnames with silly cat names
+ * @author Ken
+ */
 public class CatNameGenerator extends NameGenerator {
 
 	private String[] catNames = {"Scratchy", "TopCat", "Lion-O", "Tomcat", "Mr Fluffy", "CatsRule"};

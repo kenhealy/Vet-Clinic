@@ -1,6 +1,14 @@
 package NameGenerators;
 import java.util.Random;
 
+/**
+ * Base class to generate random names
+ * firstnames - array of Strings that could be first names
+ * surnames - array Strings that coudl be surnames
+ * 
+ * getRandomName() generates a random full name using these arrays
+ * @author Ken
+ */
 public class NameGenerator {
 
 	protected String[] firstNames = {"ken", "Tom", "Sally", "Pavel", "Priscilla", "Claudia", "Steffany"};
@@ -13,9 +21,12 @@ public class NameGenerator {
 		
 	}
 	
+        /**
+         * Generates a random name using firstnames and surnames
+         * @return the name as a String
+         */
 	public String getRandomName() {
-		//return a random name
-		
+				
 		Random r = new Random();
 		
 		//pick a firstname and surname based on length of array

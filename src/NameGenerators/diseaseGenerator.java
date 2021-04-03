@@ -1,5 +1,9 @@
 package NameGenerators;
 
+/**
+ * Extend NameGenerator class and replace firstNames and surnames with silly disease names
+ * @author Ken
+ */
 public class diseaseGenerator extends NameGenerator {
 
 	private String[] diseaseNames = {"Smelly", "Wonky", "Broken", "Missing", "Achy breaky", "Upside-down", "Infested", "Wart-covered"};

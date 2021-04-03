@@ -1,5 +1,9 @@
 package NameGenerators;
 
+/**
+ * Extend NameGenerator class and replace firstNames and surnames with silly dog names
+ * @author Ken
+ */
 public class DogNameGenerator extends NameGenerator {
 
 	private String[] dogNames = {"Boxy", "Fido", "Rex", "Tuffington", "Yelper", "Sir WhinesALot", "Misty"};
