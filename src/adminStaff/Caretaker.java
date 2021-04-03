@@ -3,6 +3,10 @@ package adminStaff;
 import staff.AdminStaff;
 import staff.StaffType;
 
+/**
+ * Caretakers extend AdminStaff
+ * @author Ken
+ */
 public class Caretaker extends AdminStaff {
 
 	public Caretaker(String firstname, String surname) {
@@ -11,6 +15,10 @@ public class Caretaker extends AdminStaff {
 		
 	}
 
-	
+	@Override
+	public String toString() {
+			
+		return "Caretaker";
+	}
 
 }

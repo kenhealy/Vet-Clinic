@@ -10,4 +10,9 @@ public class FrontDeskAdmin extends AdminStaff {
 		
 	}
 
+        @Override
+	public String toString() {
+			
+            return "Front Desk Administrator";
+	}
 }

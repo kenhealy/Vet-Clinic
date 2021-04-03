@@ -49,7 +49,7 @@ public class VetClinic {
 		}
 		////////////////////////////////
 		
-		System.out.println("This clinic currently treats the following types of animal: \n" + animalUtils.listAnimalTypes() + "\n *********** ");
+		System.out.println("This clinic currently treats the following types of animal: \n" + AnimalType.listAnimalTypes() + "\n *********** ");
 	}
 
 }

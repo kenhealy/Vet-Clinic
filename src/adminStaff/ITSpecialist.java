@@ -3,6 +3,11 @@ package adminStaff;
 import staff.AdminStaff;
 import staff.StaffType;
 
+/**
+ * ITSpecialist extends AdminStaff
+ * 
+ * @author Ken
+ */
 public class ITSpecialist extends AdminStaff {
 
 	public ITSpecialist(String firstname, String surname) {
@@ -11,6 +16,10 @@ public class ITSpecialist extends AdminStaff {
 		
 	}
 
-	
+	@Override
+	public String toString() {
+			
+            return "IT Specialist";
+	}
 
 }

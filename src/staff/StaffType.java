@@ -104,11 +104,7 @@ public enum StaffType {
 			return Department.ADMIN;
 		}
 
-		@Override
-		public String toString() {
-			// TODO Auto-generated method stub
-			return "Front Desk Administrator";
-		}
+		
 		
 	},
 	
@@ -131,11 +127,7 @@ public enum StaffType {
 			return Department.ADMIN;
 		}
 
-		@Override
-		public String toString() {
-			// TODO Auto-generated method stub
-			return "IT Specialist";
-		}
+		
 	},
 	
 	CARETAKER{
@@ -154,11 +146,7 @@ public enum StaffType {
 
 		
 
-		@Override
-		public String toString() {
-			// TODO Auto-generated method stub
-			return "Caretaker";
-		}
+		
 
 
 
@@ -171,8 +159,6 @@ public enum StaffType {
 	};
 	
 	public abstract StaffMember getStaff();
-	
-	public abstract String toString();
 	
 	public abstract Department whichDept();
 	
