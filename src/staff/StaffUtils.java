@@ -37,7 +37,11 @@ public class StaffUtils {
 		return allStaff;
 	}
 	
-	//@return a formatted string of all available staff types in department @param dept
+	/**
+         * Create a formatted STring that is a list of staff types belonging to a given department
+         * @param dept - the Department specified
+         * @return formatted String listing staff types
+         */
 	public static String listTypeByDepartment(Department dept) {
 		
 		String typeString ="";
@@ -55,6 +59,12 @@ public class StaffUtils {
 		return typeString;
 	}
 	
+        /**
+         * Filter a list of staff members from a given staff list who belong to a specified department
+         * @param staffList - an ArrayList of staffMembers
+         * @param dept - the Department specified
+         * @return ArrayList containing only staff members from dept
+         */
 	public static ArrayList<StaffMember> listStaffByDepartment (ArrayList<StaffMember> staffList, Department dept){
 		
 		ArrayList<StaffMember> specificList = new ArrayList<StaffMember>();

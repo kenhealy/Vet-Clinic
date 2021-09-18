@@ -30,6 +30,6 @@ public abstract class MedicalStaff extends StaffMember {
 		} while (counter < this.MAXPATIENTS);
 	}
 	
-	
+        
 
 }

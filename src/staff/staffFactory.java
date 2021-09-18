@@ -15,7 +15,20 @@ public class staffFactory {
 		this.allStaffTypes = StaffType.values();
 		
 	}
-		
+	/**
+         * Generate a random StaffMemmber from a random department
+         * @return the StaffMember generated
+         */	
+        public StaffMember getStaff(){
+            
+            Department[] allDepts = Department.values();
+            Random r = new Random();
+            
+            int randomDeptNo = r.nextInt(allDepts.length);
+            
+            return getStaff(allDepts[randomDeptNo]);
+        }
+        
 	/**
          * 
          * @param dept the department specified
@@ -31,9 +44,11 @@ public class staffFactory {
 			return someTypes.get(r.nextInt(someTypes.size())).getStaff();
 		}
 		
-		/* @param type is the staff type required
-		 * @return an object of the required type
-		 */
+		/**
+                 * Create a STaffMember of a specified type
+                 * @param type - the STaffType required
+                 * @return the staffMember generated
+                 */
 		private StaffMember getStaff(StaffType type) {
 			
 			return type.getStaff();
@@ -59,9 +74,12 @@ public class staffFactory {
 
 		
 		
-		/*@returns a new STaffMember object based on the type specified @param typeAsString
-		* @throws a NoSuchStaffTypeException if @param typeAsString does not correspond
-		* to an available Staff Type */
+		/**
+                 * Creates a STaffMember based on the type requested
+                 * @param typeAsString - the StaffType required, as a STring
+                 * @return the StaffMember generated
+                 * @throws NoSuchStaffTypeException if there is no type matching the request
+                 */
 		public StaffMember getStaff(String typeAsString) throws NoSuchStaffTypeException {
 			
 			int counter = 0;

@@ -5,6 +5,7 @@ import java.util.Random;
 
 import animals.*;
 import staff.StaffMember;
+import staff.staffFactory;
 
 public class VetClinic {
 
@@ -15,9 +16,9 @@ public class VetClinic {
 	public VetClinic() {
 		
 		this.patients = new ArrayList<Animal>();
-		admitPatients();
-		//this.staffList = new ArrayList<StaffMember>();
-		//createStaff();
+		admitPatients(1000);
+		this.staffList = new ArrayList<StaffMember>();
+		createStaff(50);
 		
 	}
 
@@ -29,12 +30,15 @@ public class VetClinic {
 		
 	}
 	
-	private void admitPatients() {
+        /**
+         * Generate a number of random animals that are the patients of the clinic and populate patientList
+         * @param numPatients - the number of patients wanted
+         */
+	private void admitPatients(int numPatients) {
 		
-		Random r = new Random();
 		AnimalFactory myAnimalFactory = new AnimalFactory();
 		
-		for (int i=0; i<1000; i++) {
+		for (int i=0; i<numPatients; i++) {
 			
 			Animal someAnimal = myAnimalFactory.getAnimal();
 			
@@ -42,14 +46,40 @@ public class VetClinic {
 				
 		}
 		
-		//INCLUDED FOR TESTING ONLY//
-		for( Animal P: patients) {
-			
-			System.out.println(P.toString());
-		}
-		////////////////////////////////
+		
 		
 		System.out.println("This clinic currently treats the following types of animal: \n" + AnimalType.listAnimalTypes() + "\n *********** ");
 	}
+
+        /**
+         * Generate a number of random staff members and populate staffList
+         * @param numStaff - the number of StaffMembers wanted
+         */
+    private void createStaff(int numStaff) {
+        
+       staffFactory myStaffFactory = new staffFactory();
+       
+       for (int i=0; i<numStaff; i++) {
+			
+           StaffMember newStaff = myStaffFactory.getStaff();
+           
+           this.staffList.add(newStaff);
+				
+	}
+       
+      
+    }
+    
+     public String listAllPatients(){
+           
+           String list = "";
+           
+		for( Animal P: patients) {
+			
+			list = list.concat(P.toString());
+		}
+		
+                return list;
+       }
 
 }

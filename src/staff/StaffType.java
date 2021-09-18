@@ -21,11 +21,15 @@ public enum StaffType {
 			
 		}
 		
-		@Override
-		public Department whichDept() {
-			// TODO Auto-generated method stub
-			return Department.MEDICAL;
-		}
+		/**
+         * 
+         * @return Medical for all MedicalStaff sub-types
+         */
+	@Override
+	public Department whichDept() {
+		
+            return Department.MEDICAL;
+	}
 
 		@Override
 		public String toString() {
@@ -47,11 +51,15 @@ public enum StaffType {
 			return null;
 		}
 		
-		@Override
-		public Department whichDept() {
-			
-			return Department.MEDICAL;
-		}
+		/**
+         * 
+         * @return Medical for all MedicalStaff sub-types
+         */
+	@Override
+	public Department whichDept() {
+		
+            return Department.MEDICAL;
+	}
 
 		@Override
 		public String toString() {
@@ -72,11 +80,15 @@ public enum StaffType {
 			return new Intern(name[0], name[1] );
 		}
 		
-		@Override
-		public Department whichDept() {
-			// TODO Auto-generated method stub
-			return Department.MEDICAL;
-		}
+		/**
+         * 
+         * @return Medical for all MedicalStaff sub-types
+         */
+	@Override
+	public Department whichDept() {
+		
+            return Department.MEDICAL;
+	}
 
 		@Override
 		public String toString() {
@@ -98,11 +110,15 @@ public enum StaffType {
 			return new FrontDeskAdmin(name[0], name[1] );
 		}
 		
-		@Override
-		public Department whichDept() {
-			// TODO Auto-generated method stub
-			return Department.ADMIN;
-		}
+		 /**
+         * 
+         * @return Admin for all AdminStaff subtypes
+         */
+        @Override
+	public Department whichDept() {
+			
+		return Department.ADMIN;
+	}
 
 		
 		
@@ -121,12 +137,16 @@ public enum StaffType {
 			return new ITSpecialist(name[0], name[1] );
 		}
 		
-		@Override
-		public Department whichDept() {
-			// TODO Auto-generated method stub
-			return Department.ADMIN;
-		}
-
+		
+ /**
+         * 
+         * @return Admin for all AdminStaff subtypes
+         */
+        @Override
+	public Department whichDept() {
+			
+		return Department.ADMIN;
+	}
 		
 	},
 	
@@ -145,22 +165,27 @@ public enum StaffType {
 		}
 
 		
-
+ /**
+         * 
+         * @return Admin for all AdminStaff subtypes
+         */
+        @Override
+	public Department whichDept() {
+			
+		return Department.ADMIN;
+	}
 		
 
 
 
-		@Override
-		public Department whichDept() {
-			// TODO Auto-generated method stub
-			return Department.ADMIN;
-		}
+		
+		
 		
 	};
 	
 	public abstract StaffMember getStaff();
-	
-	public abstract Department whichDept();
+        
+        public abstract Department whichDept();
 	
 	private static String[] generateName() {
 		
@@ -179,6 +204,7 @@ public enum StaffType {
 		
 		for (StaffType t: allTypes) {
 			
+                    
 			if(t.whichDept() == Department.ADMIN) {
 				admins.add(t);
 			}
