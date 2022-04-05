@@ -84,6 +84,26 @@ public enum AnimalType {
                 return "Rabbit";
             }
             
+        },
+        
+        ELEPHANT{
+            
+            @Override
+            public Animal getAnimal() {
+                
+                this.NG = new DogNameGenerator();
+                String name = NG.getRandomName();
+			
+			
+		return new Elephant(name, getIllness());
+            }
+
+            @Override
+            public String toString() {
+                
+                return "Elephant";
+            }
+            
         }
         
         
