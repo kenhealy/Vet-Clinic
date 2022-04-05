@@ -44,11 +44,16 @@ public class VetClinic {
 			
 			this.patients.add(someAnimal);
 				
+                        System.out.println("****");
+                        System.out.println(someAnimal);
+                          System.out.println("****");      
+                                
+                          System.out.println("This clinic currently treats the following types of animal: \n" + AnimalType.listAnimalTypes() + "\n ***********");
 		}
 		
 		
 		
-		System.out.println("This clinic currently treats the following types of animal: \n" + AnimalType.listAnimalTypes() + "\n *********** ");
+		 
 	}
 
         /**
