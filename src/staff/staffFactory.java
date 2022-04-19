@@ -40,8 +40,14 @@ public class staffFactory {
 		    Random r = new Random();
 			
 			someTypes = dept.listAllTypes();
-			
-			return someTypes.get(r.nextInt(someTypes.size())).getStaff();
+                        
+			int randomNo = r.nextInt(someTypes.size());
+                        
+                        StaffMember selected = someTypes.get(randomNo).getStaff();
+                        
+                        
+                        
+			return selected;
 		}
 		
 		/**

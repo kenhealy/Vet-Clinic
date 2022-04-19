@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import animals.*;
+import java.util.Scanner;
 import staff.StaffMember;
+import staff.StaffType;
 import staff.staffFactory;
 
 public class VetClinic {
@@ -18,16 +20,25 @@ public class VetClinic {
 		this.patients = new ArrayList<Animal>();
 		admitPatients(1000);
 		this.staffList = new ArrayList<StaffMember>();
-		createStaff(50);
+                createStaff(50);
 		
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+                Scanner myKB = new Scanner(System.in);
+                
 		VetClinic myClinic = new VetClinic();
 		
+                
+                System.out.println("STAFF LIST\n\n" + myClinic.listAllStaff());
+                System.out.println("Press Enter to continue");
+                myKB.nextLine();
+                System.out.println("PATIENT LIST\n\n\n" + myClinic.listAllPatients() );                
+                System.out.println("This clinic currently treats the following types of animal: \n" + myClinic.getPatientTypes() + "\n ***********");
 		
+                
 	}
 	
         /**
@@ -44,11 +55,7 @@ public class VetClinic {
 			
 			this.patients.add(someAnimal);
 				
-                        System.out.println("****");
-                        System.out.println(someAnimal);
-                          System.out.println("****");      
-                                
-                          System.out.println("This clinic currently treats the following types of animal: \n" + AnimalType.listAnimalTypes() + "\n ***********");
+                       
 		}
 		
 		
@@ -75,16 +82,54 @@ public class VetClinic {
       
     }
     
+    /**
+     * Generate a formatted String that contains all patient details
+     * @return the formatted string
+     */
      public String listAllPatients(){
            
            String list = "";
            
-		for( Animal P: patients) {
+		for( Animal p: patients) {
 			
-			list = list.concat(P.toString());
+			list = list.concat(p.toString());
 		}
 		
                 return list;
        }
 
+     /**
+      * Generates  a formatted string that contains the details of all staff working in the clinic
+      * @return the formatted string
+      */
+     public String listAllStaff(){
+           
+           String list = "";
+           
+		for( StaffMember s: staffList) {
+			
+			list = list.concat(s.toString());
+                        
+		}
+		
+                return list;
+       }
+     /**
+      * 
+      * @return a formatted String listing all "patients types" (i.e. Types of Animal) treated in this clinic
+      */
+     public String getPatientTypes(){
+         
+         return AnimalType.listAnimalTypesAsString();
+     }
+     
+     /**
+      * 
+      * @return a formatted String listing all staff types working in this clinic
+      */
+     public String getStaffTypes(){
+         
+         return StaffType.listStaffTypesAsString();
+         
+     }
 }

@@ -48,7 +48,7 @@ public enum StaffType {
 			
 			String[] name = generateName();
 			
-			return null;
+			return new VetNurse(name[0], name[1]);
 		}
 		
 		/**
@@ -120,7 +120,11 @@ public enum StaffType {
 		return Department.ADMIN;
 	}
 
-		
+		@Override
+		public String toString() {
+			// TODO Auto-generated method stub
+			return "Front Desk";
+		}
 		
 	},
 	
@@ -142,12 +146,18 @@ public enum StaffType {
          * 
          * @return Admin for all AdminStaff subtypes
          */
-        @Override
-	public Department whichDept() {
-			
+            @Override
+            public Department whichDept() {
+            
 		return Department.ADMIN;
-	}
+            }
 		
+            @Override
+            public String toString() {
+			
+             return "IT Specialist";
+            }
+                
 	},
 	
 	CARETAKER{
@@ -228,4 +238,21 @@ public enum StaffType {
 		
 		return medicals;
 	}
+        
+        /**
+        * 
+        * @return All available types as a formatted multi-line String
+        */
+	public static String listStaffTypesAsString() {
+			
+			String list = "";
+			StaffType[] types = StaffType.values();
+			
+			for( int counter = 0; counter<types.length; counter++) {
+			
+				list = list.concat((counter + 1) + ": " + types[counter].toString() + "s \n");
+			}
+			
+			return list;
+		}
 }

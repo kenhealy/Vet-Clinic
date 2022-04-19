@@ -15,10 +15,6 @@ public class Caretaker extends AdminStaff {
 		
 	}
 
-	@Override
-	public String toString() {
-			
-		return "Caretaker";
-	}
+	
 
 }

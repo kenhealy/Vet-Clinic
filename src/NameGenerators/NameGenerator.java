@@ -11,7 +11,7 @@ import java.util.Random;
  */
 public class NameGenerator {
 
-	protected String[] firstNames = {"ken", "Tom", "Sally", "Pavel", "Priscilla", "Claudia", "Steffany"};
+	protected String[] firstNames = {"Ken", "Tom", "Sally", "Pavel", "Priscilla", "Claudia", "Steffany"};
 	
 	protected String[] surnames = {"Murphy", "Silva", "Smith", "Jones", "Carvalho", "Ernst"};
 	

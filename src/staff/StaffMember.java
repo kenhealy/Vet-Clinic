@@ -49,7 +49,7 @@ public abstract class StaffMember {
 	//return the staff member's name in full
 	public String toString() {
 		
-		return this.firstname + " " + this.surname;
+		return "\n********* \n Staff ID:\t" + this.staff_ID + "\nFirstname:\t" + this.firstname + "\nSurname:\t" + this.surname + "\nRole:\t" + this.role.toString();
 	}
 	
 	public  String performTask() {

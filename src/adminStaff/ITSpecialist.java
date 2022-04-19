@@ -16,10 +16,6 @@ public class ITSpecialist extends AdminStaff {
 		
 	}
 
-	@Override
-	public String toString() {
-			
-            return "IT Specialist";
-	}
+	
 
 }

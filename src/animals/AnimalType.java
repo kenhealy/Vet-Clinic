@@ -91,7 +91,7 @@ public enum AnimalType {
             @Override
             public Animal getAnimal() {
                 
-                this.NG = new DogNameGenerator();
+                this.NG = new ElephantNameGenerator();
                 String name = NG.getRandomName();
 			
 			
@@ -125,7 +125,7 @@ public enum AnimalType {
         * 
         * @return All available types as a formatted multi-line String
         */
-	public static String listAnimalTypes() {
+	public static String listAnimalTypesAsString() {
 			
 			String list = "";
 			AnimalType[] types = AnimalType.values();
