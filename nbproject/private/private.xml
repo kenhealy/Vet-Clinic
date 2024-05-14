@@ -2,21 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/Ken/Desktop/Java/Vet%20Clinic/src/staff/AdminStaff.java</file>
-            <file>file:/C:/Users/Ken/Desktop/Java/Vet%20Clinic/src/Clinic/VetClinic.java</file>
-            <file>file:/C:/Users/Ken/Desktop/Java/Vet%20Clinic/src/medicalStaff/Intern.java</file>
-            <file>file:/C:/Users/Ken/Desktop/Java/Vet%20Clinic/src/animals/AnimalFactory.java</file>
-            <file>file:/C:/Users/Ken/Desktop/Java/Vet%20Clinic/src/staff/Department.java</file>
-            <file>file:/C:/Users/Ken/Desktop/Java/Vet%20Clinic/src/medicalStaff/Vet.java</file>
-            <file>file:/C:/Users/Ken/Desktop/Java/Vet%20Clinic/src/staff/MedicalStaff.java</file>
-            <file>file:/C:/Users/Ken/Desktop/Java/Vet%20Clinic/src/animals/Elephant.java</file>
-            <file>file:/C:/Users/Ken/Desktop/Java/Vet%20Clinic/src/animals/Cat.java</file>
-            <file>file:/C:/Users/Ken/Desktop/Java/Vet%20Clinic/src/staff/StaffMember.java</file>
-            <file>file:/C:/Users/Ken/Desktop/Java/Vet%20Clinic/src/medicalStaff/VetNurse.java</file>
-            <file>file:/C:/Users/Ken/Desktop/Java/Vet%20Clinic/src/staff/StaffType.java</file>
-            <file>file:/C:/Users/Ken/Desktop/Java/Vet%20Clinic/src/staff/staffFactory.java</file>
-            <file>file:/C:/Users/Ken/Desktop/Java/Vet%20Clinic/src/animals/AnimalType.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
