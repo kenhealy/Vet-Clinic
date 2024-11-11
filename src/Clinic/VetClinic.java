@@ -38,7 +38,7 @@ public class VetClinic {
                 System.out.println("PATIENT LIST\n\n\n" + myClinic.listAllPatients() );                
                 System.out.println("This clinic currently treats the following types of animal: \n" + myClinic.getPatientTypes() + "\n ***********");
 		
-                
+                System.out.println("Test");
 	}
 	
         /**
